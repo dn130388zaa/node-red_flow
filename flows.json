@@ -8,30 +8,69 @@
         "env": []
     },
     {
-        "id": "828e9507b26e89a9",
-        "type": "inject",
+        "id": "5867d4b834baf2d1",
+        "type": "function",
+        "z": "754c0a40bdfc8069",
+        "name": "Test",
+        "func": "msg.payload = 'Test';\n// https://noderedzanton-3a8cc66f4be8.herokuapp.com/api/your-endpoint\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "e9aef5a0e13d8d5b"
+            ]
+        ]
+    },
+    {
+        "id": "e9aef5a0e13d8d5b",
+        "type": "http response",
         "z": "754c0a40bdfc8069",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 140,
+        "statusCode": "",
+        "headers": {},
+        "x": 590,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2e6e112356014449",
+        "type": "http in",
+        "z": "754c0a40bdfc8069",
+        "name": "test",
+        "url": "/your-endpoint",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 300,
         "wires": [
-            []
+            [
+                "5867d4b834baf2d1",
+                "46103e60aec973cf"
+            ]
         ]
+    },
+    {
+        "id": "46103e60aec973cf",
+        "type": "debug",
+        "z": "754c0a40bdfc8069",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 340,
+        "wires": []
     }
 ]
