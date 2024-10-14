@@ -1,0 +1,13 @@
+{
+  "name": "node-red_flow",
+  "description": "Project description",
+  "version": "1.0.0",
+  "projects": {
+    "git": {
+      "remotes": {
+        "origin": "https://dn130388zaa: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@github.com/dn130388zaa/node-red_flow"
+      }
+    }
+  },
+  "activeProject": "node-red_flow"
+}
